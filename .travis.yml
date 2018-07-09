@@ -1,8 +1,0 @@
-sudo: false
-language: ruby
-rvm:
-  - 2.3.6
-  - 2.4.3
-env:
-  - FACEIT_CLIENT_ID=test
-before_install: gem install bundler -v 1.16.0
