@@ -9,24 +9,19 @@ module Faceit
   class Client
     API_ENDPOINT = "https://open.faceit.com/data/v4".freeze
 
-    def initialize(client_id: nil, access_token: nil)
-      if client_id.nil? && access_token.nil?
-        raise "An identifier token (client ID or bearer token) is required"
-      elsif !!client_id && !!access_token
-        warn(%{WARNING:
-It is recommended that only one identifier token is specified.
-Unpredictable behavior may follow.})
+    def initialize(api_key: nil)
+      if api_key.nil?
+        raise "An APIKEY is required to create client"
+      elsif !!api_key
+        warn(%{WARNING: Apikey is required.})
       end
 
       headers = {
         "User-Agent": "face-it-ruby client #{Faceit::VERSION}"
       }
-      unless client_id.nil?
-        headers["Client-ID"] = client_id
-      end
-      unless access_token.nil?
-        access_token = access_token.gsub(/^Bearer /, "")
-        headers["Authorization"] = "Bearer #{access_token}"
+      unless api_key.nil?
+        api_key = api_key.gsub(/^Bearer /, "")
+        headers["Authorization"] = "Bearer #{api_key}"
       end
 
       @conn = Faraday.new(API_ENDPOINT, { headers: headers }) do |faraday|
