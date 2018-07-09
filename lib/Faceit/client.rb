@@ -38,12 +38,14 @@ module Faceit
       Response.new(player)
     end
 
+    def get(resource, params)
+      http_res = @conn.get(resource, params)
+      finish(http_res)
+    end
+
     private
 
-      def get(resource, params)
-        http_res = @conn.get(resource, params)
-        finish(http_res)
-      end
+
 
       def post(resource, params)
         http_res = @conn.post(resource, params)
