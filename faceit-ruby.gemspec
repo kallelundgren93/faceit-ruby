@@ -1,6 +1,6 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "face-it/version"
+require "faceit/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
