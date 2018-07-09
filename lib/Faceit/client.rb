@@ -3,7 +3,7 @@ require "faraday_middleware"
 
 require "faceit/response"
 require "faceit/api_error"
-#require all different calls like 'require faceit/matches'
+require "faceit/player"
 
 module Faceit
   class Client
@@ -29,6 +29,13 @@ module Faceit
         faraday.response :json
         faraday.adapter Faraday.default_adapter
       end
+    end
+
+    def get_player(options = {})
+      res = get('/players/', options)
+
+      player = res[:data].map { |g| Player.new(g) }
+      Response.new(player)
     end
 
     private
