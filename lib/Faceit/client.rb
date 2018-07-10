@@ -4,6 +4,7 @@ require "faraday_middleware"
 require "faceit/response"
 require "faceit/api_error"
 require "faceit/player"
+require "faceit/game"
 
 module Faceit
   class Client
@@ -36,6 +37,13 @@ module Faceit
 
       player = res[:data].map { |g| Player.new(g) }
       Response.new(player)
+    end
+
+    def get_games(options = {})
+      res = get('games', options)
+
+      games = res[:data].map { |g| Game.new(g) }
+      Response.new(games)
     end
 
     def get(resource, params)
