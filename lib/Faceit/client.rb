@@ -70,9 +70,7 @@ module Faceit
           raise ApiError.new(http_res.status, http_res.body)
         end
 
-        {
-          items: http_res.body
-        }
+        http_res.body
       end
   end
 end
