@@ -1,16 +1,22 @@
 module Faceit
   class Player
-    # ID of the player.
+
     attr_reader :player_id
-    # nickname for player
     attr_reader :nickname
-    # avatar for user
     attr_reader :avatar
+    attr_reader :country
+    attr_reader :games
+    attr_reader :status
+    attr_reader :verified
 
     def initialize(attributes = {})
       @id = attributes['player_id']
       @nickname = attributes['nickname']
       @avatar = attributes['avatar']
+      @country = attributes['country']
+      @games = attributes['games']
+      @status = attributes['status']
+      @verified = attributes['verified']
     end
   end
 end

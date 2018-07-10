@@ -32,36 +32,82 @@ module Faceit
       end
     end
 
-    def get_player(player_id)
-      get("players/#{player_id}", {})
+    #Players
+    def get_player(nickname)
+      get("players/#{nickname}", {})
     end
 
-    def get_all_games
-      get('games', {})
+    #Games
+    def get_games(game_id)
+      if game_id
+        res = get("games/#{game_id}", {})
+        games = res.map { |g| Game.new(g) }
+      else
+        res = get("games", {})
+        games = res['items'].map { |g| Game.new(g) }
+      end
+
+      Response.new(games)
     end
+    #ex. client.get_games("tf2") or. client.get_games /returns all
+
+    #SEARCHES
+    def search_organizers(options = {})
+      get("search/organizers", options)
+
+      organizers = res['items'].map { |g| Organizer.new(g) }
+      Response.new(organizers)
+    end
+    #ex. client.search_organizers({[name: "SomeOrganizer"], [offset: "0"], [limit: "20"]})
+
+    def search_players(options = {})
+      get("search/players", options)
+
+      players = res['items'].map { |g| Player.new(g) }
+      Response.new(players)
+    end
+    #ex. client.search_players({[nickname: "SomeNickname"], [offset: "0"], [limit: "20"]})
+
+    def search_teams(options = {})
+      get("search/teams", options)
+
+      teams = res['items'].map { |g| Team.new(g) }
+      Response.new(teams)
+    end
+    #ex. client.search_teams({[nickname: "SomeTeamNickname"], [offset: "0"], [limit: "20"]})
+
+    def search_tournaments(options = {})
+      get("search/tournaments", options)
+
+      tournaments = res['items'].map { |g| Tournament.new(g) }
+      Response.new(tournaments)
+    end
+    #ex. client.search_tournaments({[name: "SomeTournament"], [offset: "0"], [limit: "20"]})
 
     private
-      def get(resource, params)
-        http_res = @conn.get(resource, params)
-        finish(http_res)
+
+    def get(resource, params)
+      http_res = @conn.get(resource, params)
+      finish(http_res)
+    end
+
+
+    def post(resource, params)
+      http_res = @conn.post(resource, params)
+      finish(http_res)
+    end
+
+    def put(resource, params)
+      http_res = @conn.put(resource, params)
+      finish(http_res)
+    end
+
+    def finish(http_res)
+      unless http_res.success?
+        raise ApiError.new(http_res.status, http_res.body)
       end
 
-      def post(resource, params)
-        http_res = @conn.post(resource, params)
-        finish(http_res)
-      end
-
-      def put(resource, params)
-        http_res = @conn.put(resource, params)
-        finish(http_res)
-      end
-
-      def finish(http_res)
-        unless http_res.success?
-          raise ApiError.new(http_res.status, http_res.body)
-        end
-
-        http_res.body
-      end
+      http_res.body
+    end
   end
 end
