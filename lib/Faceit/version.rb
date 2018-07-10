@@ -1,3 +1,3 @@
 module Faceit
-  VERSION = "0.2.5.1"
+  VERSION = "0.2.5.2"
 end

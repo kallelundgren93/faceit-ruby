@@ -71,7 +71,7 @@ module Faceit
         end
 
         {
-          items: http_res.body['items']
+          items: http_res.body
         }
       end
   end
