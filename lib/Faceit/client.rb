@@ -39,21 +39,23 @@ module Faceit
 
     #Games
     def get_games(game_id)
-      if game_id
+      if game_id.present?
         res = get("games/#{game_id}", {})
         games = res.map { |g| Game.new(g) }
       else
         res = get("games", {})
-        games = res['items'].map { |g| Game.new(g) }
+        games = res.map { |g| Game.new(g) }
       end
 
       Response.new(games)
     end
-    #ex. client.get_games("tf2") or. client.get_games /returns all
+    #ex. client.get_games("tf2") or.
+    #games = client.get_games() /returns all
+    #games.items.first = 1 game
 
     #SEARCHES
     def search_organizers(options = {})
-      get("search/organizers", options)
+      res = get("search/organizers", options)
 
       organizers = res['items'].map { |g| Organizer.new(g) }
       Response.new(organizers)
@@ -61,7 +63,7 @@ module Faceit
     #ex. client.search_organizers({[name: "SomeOrganizer"], [offset: "0"], [limit: "20"]})
 
     def search_players(options = {})
-      get("search/players", options)
+      res = get("search/players", options)
 
       players = res['items'].map { |g| Player.new(g) }
       Response.new(players)
@@ -69,7 +71,7 @@ module Faceit
     #ex. client.search_players({[nickname: "SomeNickname"], [offset: "0"], [limit: "20"]})
 
     def search_teams(options = {})
-      get("search/teams", options)
+      res = get("search/teams", options)
 
       teams = res['items'].map { |g| Team.new(g) }
       Response.new(teams)
@@ -77,7 +79,7 @@ module Faceit
     #ex. client.search_teams({[nickname: "SomeTeamNickname"], [offset: "0"], [limit: "20"]})
 
     def search_tournaments(options = {})
-      get("search/tournaments", options)
+      res = get("search/tournaments", options)
 
       tournaments = res['items'].map { |g| Tournament.new(g) }
       Response.new(tournaments)
