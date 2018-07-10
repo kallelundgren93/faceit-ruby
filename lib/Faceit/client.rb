@@ -5,6 +5,9 @@ require "faceit/response"
 require "faceit/api_error"
 require "faceit/player"
 require "faceit/game"
+require "faceit/organizer"
+require "faceit/team"
+require "faceit/tournament"
 
 module Faceit
   class Client
