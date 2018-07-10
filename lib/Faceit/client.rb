@@ -44,10 +44,10 @@ module Faceit
     def get_games(game_id)
       if game_id.present?
         res = get("games/#{game_id}", {})
-        games = res.map { |g| Game.new(g) }
+        games = res['items'].map { |g| Game.new(g) }
       else
         res = get("games", {})
-        games = res.map { |g| Game.new(g) }
+        games = res['items'].map { |g| Game.new(g) }
       end
 
       Response.new(games)
