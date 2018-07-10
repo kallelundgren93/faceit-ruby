@@ -1,9 +1,9 @@
 module Faceit
   class Response
-    attr_reader :data
+    attr_reader :items
 
-    def initialize(data)
-      @data = data
+    def initialize(items)
+      @items = items
     end
   end
 end

@@ -33,16 +33,16 @@ module Faceit
     end
 
     def get_player(options = {})
-      res = get('/players/', options)
+      res = get('players', options)
 
-      player = res[:data].map { |g| Player.new(g) }
+      player = res[:items].map { |g| Player.new(g) }
       Response.new(player)
     end
 
     def get_games(options = {})
       res = get('games', options)
 
-      games = res[:data].map { |g| Game.new(g) }
+      games = res[:items].map { |g| Game.new(g) }
       Response.new(games)
     end
 
@@ -71,7 +71,7 @@ module Faceit
         end
 
         {
-          data: http_res.body['data']
+          items: http_res.body['items']
         }
       end
   end
