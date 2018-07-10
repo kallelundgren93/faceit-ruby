@@ -32,28 +32,19 @@ module Faceit
       end
     end
 
-    def get_player(options = {})
-      res = get('players', options)
-
-      player = res[:items].map { |g| Player.new(g) }
-      Response.new(player)
+    def get_player(player_id)
+      get("players/#{player_id}", {})
     end
 
-    def get_games(options = {})
-      res = get('games', options)
-
-      games = res[:items].map { |g| Game.new(g) }
-      Response.new(games)
-    end
-
-    def get(resource, params)
-      http_res = @conn.get(resource, params)
-      finish(http_res)
+    def get_all_games
+      get('games', {})
     end
 
     private
-
-
+      def get(resource, params)
+        http_res = @conn.get(resource, params)
+        finish(http_res)
+      end
 
       def post(resource, params)
         http_res = @conn.post(resource, params)
