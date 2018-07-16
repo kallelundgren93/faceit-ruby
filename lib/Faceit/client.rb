@@ -36,8 +36,15 @@ module Faceit
     end
 
     #Players
-    def get_player(nickname)
-      get("players/#{nickname}", {})
+    def get_player(player_id)
+      get("players/#{player_id}", {})
+    end
+
+    def get_player_by_nickname(options = {})
+      res = get("players", options)
+
+      players = res['items'].map { |g| Player.new(g) }
+      Response.new(players)
     end
 
     #Games
@@ -78,6 +85,7 @@ module Faceit
       Response.new(teams)
     end
     #ex. client.search_teams({[nickname: "SomeTeamNickname"], [offset: "0"], [limit: "20"]})
+
 
     def search_tournaments(options = {})
       res = get("search/tournaments", options)
