@@ -41,10 +41,7 @@ module Faceit
     end
 
     def get_player_by_nickname(options = {})
-      res = get("players", options)
-
-      players = res['items'].map { |g| Player.new(g) }
-      Response.new(players)
+      get("players", options)
     end
 
     #Games
