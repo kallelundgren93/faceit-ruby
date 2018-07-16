@@ -8,9 +8,13 @@ require "faceit/game"
 require "faceit/organizer"
 require "faceit/team"
 require "faceit/tournament"
+require "faceit/player_match"
+require "faceit/match"
+require "faceit/match_stats"
 
 module Faceit
   class Client
+    #init
     API_ENDPOINT = "https://open.faceit.com/data/v4".freeze
 
     def initialize(api_key: nil)
@@ -41,7 +45,17 @@ module Faceit
     end
 
     def get_player_by_nickname(nickname)
-      get("players?nickname=frekvenz", {})
+      get("players?nickname=#{nickname}", {})
+    end
+
+    def get_player_history(player_id, game_id, options = {})
+      res = get("players/#{player_id}/history?game=#{game_id}", options)
+      matches = res['items'].map { |g| PlayerMatch.new(g) }
+      Response.new(matches)
+    end
+
+    def get_player_stats(player_id, game_id)
+      get("players/#{player_id}/stats/#{game_id}", {})
     end
 
     #Games
@@ -57,6 +71,19 @@ module Faceit
     #ex. client.get_games("tf2") or.
     #games = client.get_games() /returns all
     #games.items.first = 1 game
+
+    #MATCHES
+    def get_match(match_id)
+      res = get("matches/#{match_id}")
+      matches = res['items'].map { |g| Match.new(g) }
+      Response.new(matches)
+    end
+
+    def get_match_stats(match_id)
+      res = get("matches/#{match_id}/stats")
+      matches = res['items'].map { |g| MatchStats.new(g) }
+      Response.new(matches)
+    end
 
     #SEARCHES
     def search_organizers(options = {})
@@ -93,7 +120,6 @@ module Faceit
     #ex. client.search_tournaments({[name: "SomeTournament"], [offset: "0"], [limit: "20"]})
 
     private
-
     def get(resource, params)
       http_res = @conn.get(resource, params)
       finish(http_res)
