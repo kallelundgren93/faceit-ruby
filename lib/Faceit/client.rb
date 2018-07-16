@@ -41,7 +41,7 @@ module Faceit
     end
 
     def get_player_by_nickname(nickname)
-      get("players?nickname=FrekvenZ", {})
+      get("players?nickname=frekvenz", {})
     end
 
     #Games
