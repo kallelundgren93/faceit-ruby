@@ -40,8 +40,8 @@ module Faceit
       get("players/#{player_id}", {})
     end
 
-    def get_player_by_nickname(options = {})
-      get("players", options)
+    def get_player_by_nickname(nickname)
+      get("players?nickname=#{nickname}", {})
     end
 
     #Games
