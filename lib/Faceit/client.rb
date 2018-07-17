@@ -8,9 +8,7 @@ require "faceit/game"
 require "faceit/organizer"
 require "faceit/team"
 require "faceit/tournament"
-require "faceit/player_match"
-require "faceit/match"
-require "faceit/match_stats"
+
 
 module Faceit
   class Client
@@ -73,9 +71,7 @@ module Faceit
     end
 
     def get_match_stats(match_id)
-      res = get("matches/#{match_id}/stats", {})
-      matches = res['items'].map { |g| MatchStats.new(g) }
-      Response.new(matches)
+      get("matches/#{match_id}/stats", {})
     end
 
     #SEARCHES
