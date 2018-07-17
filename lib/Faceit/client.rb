@@ -119,11 +119,14 @@ module Faceit
     end
     #ex. client.search_tournaments({[name: "SomeTournament"], [offset: "0"], [limit: "20"]})
 
-    private
     def get(resource, params)
       http_res = @conn.get(resource, params)
       finish(http_res)
     end
+
+
+    private
+
 
 
     def post(resource, params)
