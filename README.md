@@ -128,7 +128,25 @@ Faceit::Response:0x007fca6e061f68
 
 #### Example result:
 ```
-"player_id"=>"8ed9d1fa-351c-4cff-86f8-82d907a2e598", "nickname"=>"FrekvenZ", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1447861864100", "country"=>"se", "cover_image"=>"https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559", "cover_featured_image"=>"", "infractions"=>{"last_infraction_date"=>"Sun Jan 22 22:37:16 UTC 2017", "afk"=>0, "leaver"=>0, "qm_not_checkedin"=>1, "qm_not_voted"=>0}, "platforms"=>{"steam"=>"STEAM_1:1:34352020"}, "games"=>{"csgo"=>{"game_profile_id"=>"d2c40bc0-22be-4f34-a4ef-f9e5e7171121", "region"=>"EU", "regions"=>{"EU"=>{"selected_ladder_id"=>"8230146b-db40-4d2c-aa41-a413925768e0"}}, "skill_level_label"=>"6", "game_player_id"=>"76561198028969769", "skill_level"=>6, "faceit_elo"=>1516, "game_player_name"=>"Lunkenn"}, "lol_EUW"=>{"game_profile_id"=>"8c0a78c2-3785-4f12-9a4d-0dc2876051e9", "region"=>"", "regions"=>{"EUW"=>{"selected_ladder_id"=>"756d3c69-4fd8-486b-b982-7903eaaf8ed6"}}, "skill_level_label"=>"5", "game_player_id"=>"30426811", "skill_level"=>5, "faceit_elo"=>1000, "game_player_name"=>"Lunkiboii"}}, "settings"=>{"language"=>"en"}, "friends_ids"=>["1b18544e-d9e4-4f2a-995d-790a4af7523c", "49e9e9f8-21b0-4a78-b4a5-3258bb22de6f", "f3027cf0-5bd6-41cb-a229-0d6204148070", "6df895f6-eac2-4b43-9061-368bbbc3e4e9", "0a222aa6-8420-4073-9ac9-589f7621fca9", "6fa1f2e2-fba2-4979-858e-8be68073a75e", "9a037763-c0e6-4c1b-baf4-41e1caac1434", "d0453c94-7c37-4d3e-a8b5-4be934552ae5", "9db7e7ff-dc5e-4ef9-b2b2-313d49bb287d", "14d57daa-fc8d-4caa-9143-c00c247d5f5e", "a396de50-99e3-4dc4-a6f8-e26e953acf49", "f5c890e5-034d-4986-829f-17989ee5f9cf", "ca738962-fc89-404b-bca5-b4d024500b78", "ebd33792-1fc2-4466-b070-0129c77e8f9e", "ccf1bb7f-c07b-4a2c-a159-4aaf7871ce11", "5e258d18-64e6-45ad-8c49-9bcc248edefb", "b167359c-349c-4873-bef1-ecc8d75e83bd", "50682302-0997-461b-821c-fc5f9c566c2b", "afceaba6-db8d-483b-bfce-6aa88429e601", "37b89883-a408-449f-90e6-bf5a4ca87316", "1ba5b4b0-c368-4219-b994-de62153c8ebe", "7275077e-3fbc-4518-b1ee-8ccde6e9b4d0", "b9e423b5-6d81-4f67-bcf3-9713b1040917", "87459256-6fce-40b6-aa96-b75d23fc9a51", "f33bd600-1b4c-4d97-b39b-9136bf605d14", "645afdcf-9c68-4d74-a4ec-3a0f824f7caf", "2c61aec1-ea94-41c2-8598-12d148a9bfd2", "4c9936fc-8030-422a-9a98-111cd1ea19ca", "214571fe-8fc9-424a-8e73-584c8c5761ed", "16b4c644-7732-4f81-ae5f-1851f155f161", "2672a57a-48e1-49d4-9c18-9501d2c515af", "9fbd4220-eadb-4f98-95a8-780164522366", "25a3affa-4faa-4866-ab76-17d78bbfa887", "a58efd4b-5a72-430d-b4dc-300f870a2d03", "87d0b21a-500f-44ed-9b2c-12383e1434aa", "74161d98-37c9-4b72-aaf8-b495d696cbe1", "9431b65d-0af2-434e-b007-b6b4ba0f9299", "9b635542-c4e4-484f-9a65-1caedb711cf3", "3a435d26-c400-4310-86ec-07ff0e6a7627", "fdad12d5-1d40-46ea-b9cd-30f033388598"], "bans"=>[], "new_steam_id"=>"[U:1:68704041]", "steam_id_64"=>"76561198028969769", "steam_nickname"=>"Lunkenn", "membership_type"=>"unlimited", "faceit_url"=>"https://www.faceit.com/{lang}/players/FrekvenZ"
+"player_id"=>"8ed9d1fa-351c-4cff-86f8-82d907a2e598", "nickname"=>"FrekvenZ", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1447861864100", "country"=>"se", "cover_image"=>"https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559", "cover_featured_image"=>"", 
+"infractions"=>{"last_infraction_date"=>"Sun Jan 22 22:37:16 UTC 2017", "afk"=>0, 
+"leaver"=>0, "qm_not_checkedin"=>1, "qm_not_voted"=>0}, 
+"platforms"=>{"steam"=>"STEAM_1:1:34352020"}, 
+"games"=>{"csgo"=>{"game_profile_id"=>"d2c40bc0-22be-4f34-a4ef-f9e5e7171121", 
+"region"=>"EU", 
+"regions"=>{"EU"=>{"selected_ladder_id"=>"8230146b-db40-4d2c-aa41-a413925768e0"}}, 
+"skill_level_label"=>"6", "game_player_id"=>"76561198028969769", 
+"skill_level"=>6, "faceit_elo"=>1516, "game_player_name"=>"Lunkenn"}, 
+"lol_EUW"=>{"game_profile_id"=>"8c0a78c2-3785-4f12-9a4d-0dc2876051e9", 
+"region"=>"", 
+"regions"=>{"EUW"=>{"selected_ladder_id"=>"756d3c69-4fd8-486b-b982-7903eaaf8ed6"}}, 
+"skill_level_label"=>"5", "game_player_id"=>"30426811", "skill_level"=>5, "faceit_elo"=>1000, 
+"game_player_name"=>"Lunkiboii"}}, "settings"=>{"language"=>"en"}, 
+"friends_ids"=>["1b18544e-d9e4-4f2a-995d-790a4af7523c"], 
+"bans"=>[], "new_steam_id"=>"[U:1:68704041]", 
+"steam_id_64"=>"76561198028969769", 
+"steam_nickname"=>"Lunkenn", "membership_type"=>"unlimited", 
+"faceit_url"=>"https://www.faceit.com/{lang}/players/FrekvenZ"
 ```
 
 #### Getting information
@@ -140,21 +158,44 @@ Faceit::Response:0x007fca6e061f68
 #### Result:
 ```"8ed9d1fa-351c-4cff-86f8-82d907a2e598"```
 
-### GET /players/{player_id} Retrieve player details
+### GET /players/?nickname={} Get player by nickname
+```
+client.get_player_by_nickname("FrekvenZ")
 
-```client.get_player("8ed9d1fa-351c-4cff-86f8-82d907a2e598")```
+#OBS Case sensitive!!!!!!!!
+```
 
 #### Example result:
 ```
-"player_id"=>"8ed9d1fa-351c-4cff-86f8-82d907a2e598", "nickname"=>"FrekvenZ", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1447861864100", "country"=>"se", "cover_image"=>"https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559", "cover_featured_image"=>"", "infractions"=>{"last_infraction_date"=>"Sun Jan 22 22:37:16 UTC 2017", "afk"=>0, "leaver"=>0, "qm_not_checkedin"=>1, "qm_not_voted"=>0}, "platforms"=>{"steam"=>"STEAM_1:1:34352020"}, "games"=>{"csgo"=>{"game_profile_id"=>"d2c40bc0-22be-4f34-a4ef-f9e5e7171121", "region"=>"EU", "regions"=>{"EU"=>{"selected_ladder_id"=>"8230146b-db40-4d2c-aa41-a413925768e0"}}, "skill_level_label"=>"6", "game_player_id"=>"76561198028969769", "skill_level"=>6, "faceit_elo"=>1516, "game_player_name"=>"Lunkenn"}, "lol_EUW"=>{"game_profile_id"=>"8c0a78c2-3785-4f12-9a4d-0dc2876051e9", "region"=>"", "regions"=>{"EUW"=>{"selected_ladder_id"=>"756d3c69-4fd8-486b-b982-7903eaaf8ed6"}}, "skill_level_label"=>"5", "game_player_id"=>"30426811", "skill_level"=>5, "faceit_elo"=>1000, "game_player_name"=>"Lunkiboii"}}, "settings"=>{"language"=>"en"}, "friends_ids"=>["1b18544e-d9e4-4f2a-995d-790a4af7523c", "49e9e9f8-21b0-4a78-b4a5-3258bb22de6f", "f3027cf0-5bd6-41cb-a229-0d6204148070", "6df895f6-eac2-4b43-9061-368bbbc3e4e9", "0a222aa6-8420-4073-9ac9-589f7621fca9", "6fa1f2e2-fba2-4979-858e-8be68073a75e", "9a037763-c0e6-4c1b-baf4-41e1caac1434", "d0453c94-7c37-4d3e-a8b5-4be934552ae5", "9db7e7ff-dc5e-4ef9-b2b2-313d49bb287d", "14d57daa-fc8d-4caa-9143-c00c247d5f5e", "a396de50-99e3-4dc4-a6f8-e26e953acf49", "f5c890e5-034d-4986-829f-17989ee5f9cf", "ca738962-fc89-404b-bca5-b4d024500b78", "ebd33792-1fc2-4466-b070-0129c77e8f9e", "ccf1bb7f-c07b-4a2c-a159-4aaf7871ce11", "5e258d18-64e6-45ad-8c49-9bcc248edefb", "b167359c-349c-4873-bef1-ecc8d75e83bd", "50682302-0997-461b-821c-fc5f9c566c2b", "afceaba6-db8d-483b-bfce-6aa88429e601", "37b89883-a408-449f-90e6-bf5a4ca87316", "1ba5b4b0-c368-4219-b994-de62153c8ebe", "7275077e-3fbc-4518-b1ee-8ccde6e9b4d0", "b9e423b5-6d81-4f67-bcf3-9713b1040917", "87459256-6fce-40b6-aa96-b75d23fc9a51", "f33bd600-1b4c-4d97-b39b-9136bf605d14", "645afdcf-9c68-4d74-a4ec-3a0f824f7caf", "2c61aec1-ea94-41c2-8598-12d148a9bfd2", "4c9936fc-8030-422a-9a98-111cd1ea19ca", "214571fe-8fc9-424a-8e73-584c8c5761ed", "16b4c644-7732-4f81-ae5f-1851f155f161", "2672a57a-48e1-49d4-9c18-9501d2c515af", "9fbd4220-eadb-4f98-95a8-780164522366", "25a3affa-4faa-4866-ab76-17d78bbfa887", "a58efd4b-5a72-430d-b4dc-300f870a2d03", "87d0b21a-500f-44ed-9b2c-12383e1434aa", "74161d98-37c9-4b72-aaf8-b495d696cbe1", "9431b65d-0af2-434e-b007-b6b4ba0f9299", "9b635542-c4e4-484f-9a65-1caedb711cf3", "3a435d26-c400-4310-86ec-07ff0e6a7627", "fdad12d5-1d40-46ea-b9cd-30f033388598"], "bans"=>[], "new_steam_id"=>"[U:1:68704041]", "steam_id_64"=>"76561198028969769", "steam_nickname"=>"Lunkenn", "membership_type"=>"unlimited", "faceit_url"=>"https://www.faceit.com/{lang}/players/FrekvenZ"
+{"player_id"=>"8ed9d1fa-351c-4cff-86f8-82d907a2e598", "nickname"=>"FrekvenZ", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1447861864100", "country"=>"se", 
+"cover_image"=>"https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559", "cover_featured_image"=>"", 
+"infractions"=>{"last_infraction_date"=>"Sun Jan 22 22:37:16 UTC 2017", "afk"=>0, 
+"leaver"=>0, "qm_not_checkedin"=>1, "qm_not_voted"=>0}, 
+"platforms"=>{"steam"=>"STEAM_1:1:34352020"}, 
+"games"=>{"csgo"=>{"game_profile_id"=>"d2c40bc0-22be-4f34-a4ef-f9e5e7171121", 
+"region"=>"EU", "regions"=>{"EU"=>{"selected_ladder_id"=>"8230146b-db40-4d2c-aa41-a413925768e0"}}, 
+"skill_level_label"=>"6", "game_player_id"=>"76561198028969769", "skill_level"=>6, 
+"faceit_elo"=>1516, "game_player_name"=>"Lunkenn"}, 
+"lol_EUW"=>{"game_profile_id"=>"8c0a78c2-3785-4f12-9a4d-0dc2876051e9", "region"=>"", "regions"=>{"EUW"=>{"selected_ladder_id"=>"756d3c69-4fd8-486b-b982-7903eaaf8ed6"}}, 
+"skill_level_label"=>"5", "game_player_id"=>"30426811", "skill_level"=>5, "faceit_elo"=>1000, "game_player_name"=>"Lunkiboii"}}, "settings"=>{"language"=>"en"}, 
+"friends_ids"=>["1b18544e-d9e4-4f2a-995d-790a4af7523c"], "bans"=>[], 
+"new_steam_id"=>"[U:1:68704041]", "steam_id_64"=>"76561198028969769", 
+"steam_nickname"=>"Lunkenn", "membership_type"=>"unlimited", 
+"faceit_url"=>"https://www.faceit.com/{lang}/players/FrekvenZ"}
 ```
 
 #### Getting information
-```res = client.get_player("8ed9d1fa-351c-4cff-86f8-82d907a2e598")```
+```
+res = client.get_player_by_nickname("FrekvenZ")
+```
 
 #### Extracting it:
-```res['player_id']```
+```
+res['cover_image']
+```
 
 #### Result:
-```"8ed9d1fa-351c-4cff-86f8-82d907a2e598"```
+```
+"https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559"
+```
 
