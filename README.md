@@ -199,3 +199,29 @@ res['cover_image']
 "https://d50m6q67g4bn3.cloudfront.net/users_covers/8ed9d1fa-351c-4cff-86f8-82d907a2e598_1451521480559"
 ```
 
+### GET /players/{player_id}/history Retrieve all matches of a player
+```
+client.get_player_history(player_id, game_id, options = {})
+```
+##### <i>There are also <b>to:</b> and <b>from:</b> options, from: will be 1 month if not specified and to: current_timestamp. OBS! both these options require UNIX timestamp</i>
+<i>Offset and limit is optional.</i>
+
+#### Example result:
+```
+
+```
+
+#### Getting information
+```
+
+```
+
+#### Extracting it:
+```
+
+```
+
+#### Result:
+```
+
+```
