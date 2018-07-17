@@ -94,4 +94,12 @@ gem 'faceit-ruby', git: 'https://github.com/kallelundgren93/faceit-ruby.git'
 #### Result:
 ```"5000"```
   
-
+```
+# Get top live streams
+client.get_streams.data
+# Get a single user
+client.get_users({login: "disguisedtoasths"}).data.first
+# Find some games
+# (use an array for up to 100 of most queryable resources)
+client.get_games({name: ["Heroes of the Storm", "Super Mario Odyssey"]}).data
+```
