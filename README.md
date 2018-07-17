@@ -245,10 +245,10 @@ res = client.get_player_history("8ed9d1fa-351c-4cff-86f8-82d907a2e598", "csgo", 
 
 #### Extracting it:
 ```
-res['items'][0]['max_players']
+res['items'][0]['teams']['faction1']['players']
 ```
 
 #### Result:
 ```
-10
+[{"player_id"=>"590fbf1e-c737-4bf8-9fb8-0c1069c1c1d6", "nickname"=>"gERy2001", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/590fbf1e-c737-4bf8-9fb8-0c1069c1c1d6_1519456094500", "skill_level"=>0, "game_player_id"=>"76561197961534207", "game_player_name"=>"gery2k14 boiss =D", "faceit_url"=>"https://www.faceit.com/{lang}/players/gERy2001"}, {"player_id"=>"70068c58-1cf6-4d4e-b2ed-0b3e8f5ed28e", "nickname"=>"Chik_i", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/70068c58-1cf6-4d4e-b2ed-0b3e8f5ed28e_1525184062428", "skill_level"=>0, "game_player_id"=>"76561198371886762", "game_player_name"=>"ChiK_i", "faceit_url"=>"https://www.faceit.com/{lang}/players/Chik_i"}, {"player_id"=>"962b1651-f0c2-4408-b944-2205947215df", "nickname"=>"_CoasT_", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/962b1651-f0c2-4408-b944-2205947215df_1520787013582", "skill_level"=>0, "game_player_id"=>"76561198428426852", "game_player_name"=>"Getrudes", "faceit_url"=>"https://www.faceit.com/{lang}/players/_CoasT_"}, {"player_id"=>"9e73ddbe-17a8-456a-918d-53c744128f30", "nickname"=>"MayTec", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/9e73ddbe-17a8-456a-918d-53c744128f30_1480559442664", "skill_level"=>0, "game_player_id"=>"76561198000939712", "game_player_name"=>"MayTec", "faceit_url"=>"https://www.faceit.com/{lang}/players/MayTec"}, {"player_id"=>"f6ce6dc5-4a0b-458c-aa15-0b3210521fd6", "nickname"=>"ProDy10", "avatar"=>"https://d50m6q67g4bn3.cloudfront.net/avatars/f6ce6dc5-4a0b-458c-aa15-0b3210521fd6_1504386982531", "skill_level"=>0, "game_player_id"=>"76561198265543744", "game_player_name"=>"76561198265543744", "faceit_url"=>"https://www.faceit.com/{lang}/players/ProDy10"}]
 ```
