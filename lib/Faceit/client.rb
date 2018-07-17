@@ -48,9 +48,9 @@ module Faceit
       get("players?nickname=#{nickname}", {})
     end
 
-    def get_player_history(player_id, game_id, options = {})
-      res = get("players/#{player_id}/history?game=#{game_id}", options)
-      matches = res['items']
+    def get_player_history(player_id, game_id, from, to, options = {})
+      res = get("players/#{player_id}/history?game=#{game_id}?from=#{from ? from : nil}?to=#{to ? to : nil}", options)
+      matches = res['items'].map { |g| PlayerMatch.new(g) }
       Response.new(matches)
     end
 
@@ -68,9 +68,6 @@ module Faceit
         Response.new(games)
       end
     end
-    #ex. client.get_games("tf2") or.
-    #games = client.get_games() /returns all
-    #games.items.first = 1 game
 
     #MATCHES
     def get_match(match_id)
@@ -92,7 +89,6 @@ module Faceit
       organizers = res['items'].map { |g| Organizer.new(g) }
       Response.new(organizers)
     end
-    #ex. client.search_organizers({[name: "SomeOrganizer"], [offset: "0"], [limit: "20"]})
 
     def search_players(options = {})
       res = get("search/players", options)
@@ -100,7 +96,6 @@ module Faceit
       players = res['items'].map { |g| Player.new(g) }
       Response.new(players)
     end
-    #ex. client.search_players({[nickname: "SomeNickname"], [offset: "0"], [limit: "20"]})
 
     def search_teams(options = {})
       res = get("search/teams", options)
@@ -108,8 +103,6 @@ module Faceit
       teams = res['items'].map { |g| Team.new(g) }
       Response.new(teams)
     end
-    #ex. client.search_teams({[nickname: "SomeTeamNickname"], [offset: "0"], [limit: "20"]})
-
 
     def search_tournaments(options = {})
       res = get("search/tournaments", options)
@@ -117,16 +110,12 @@ module Faceit
       tournaments = res['items'].map { |g| Tournament.new(g) }
       Response.new(tournaments)
     end
-    #ex. client.search_tournaments({[name: "SomeTournament"], [offset: "0"], [limit: "20"]})
 
+    private
     def get(resource, params)
       http_res = @conn.get(resource, params)
       finish(http_res)
     end
-
-
-    private
-
 
 
     def post(resource, params)
