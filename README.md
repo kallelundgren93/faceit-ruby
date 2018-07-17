@@ -60,7 +60,7 @@ This is a implementation for most of the endpoints the Faceit Data v4 api offers
 <i>Offset and limit is optional.</i>
 
 <p>Example result:</p>
-<p><code>Faceit::Response:0x007fca6e061f68 @items=[#Faceit::Team:0x007fca6e0627b0 @id="46367ae8-1345-4482-90e9-3f2e35e137fc", @name="Astralis", @verified=false, @avatar="", @game="csgo", @faceit_url="https://www.faceit.com/{lang}/teams/46367ae8-1345-4482-90e9-3f2e35e137fc", @chat_room_id="team-46367ae8-1345-4482-90e9-3f2e35e137fc">, #<Faceit::Team:0x007fca6e062788 @id="79bcd0c8-c30c-48b3-8796-b329b9b960f6", @name="Astralis", @verified=false, @avatar="https://d50m6q67g4bn3.cloudfront.net/teams_avatars/79bcd0c8-c30c-48b3-8796-b329b9b960f6_1468258988760", @game="dota2", @faceit_url="https://www.faceit.com/{lang}/teams/79bcd0c8-c30c-48b3-8796-b329b9b960f6", @chat_room_id="team-79bcd0c8-c30c-48b3-8796-b329b9b960f6"</code></p>
+<p><code>Faceit::Response:0x007fca6e061f68 @items=[#Faceit::Team:0x007fca6e0627b0 @id="46367ae8-1345-4482-90e9-3f2e35e137fc", @name="Astralis", @verified=false, @avatar="", @game="csgo", @faceit_url="https://www.faceit.com/{lang}/teams/46367ae8-1345-4482-90e9-3f2e35e137fc", @chat_room_id="team-46367ae8-1345-4482-90e9-3f2e35e137fc">, #Faceit::Team:0x007fca6e062788 @id="79bcd0c8-c30c-48b3-8796-b329b9b960f6", @name="Astralis", @verified=false, @avatar="https://d50m6q67g4bn3.cloudfront.net/teams_avatars/79bcd0c8-c30c-48b3-8796-b329b9b960f6_1468258988760", @game="dota2", @faceit_url="https://www.faceit.com/{lang}/teams/79bcd0c8-c30c-48b3-8796-b329b9b960f6", @chat_room_id="team-79bcd0c8-c30c-48b3-8796-b329b9b960f6"</code></p>
 
 <p>Getting information</p>
 <p><code>res = client.search_teams({nickname: "Astralis (Astralis)", offset: "0", limit: "2"})</code></p>
