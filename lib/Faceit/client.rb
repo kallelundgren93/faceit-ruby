@@ -48,10 +48,8 @@ module Faceit
       get("players?nickname=#{nickname}", {})
     end
 
-    def get_player_history(player_id, game_id, from, to, options = {})
-      res = get("players/#{player_id}/history?game=#{game_id}&from=#{from ? from : nil}&to=#{to ? to : nil}", options)
-      matches = res['items'].map { |g| PlayerMatch.new(g) }
-      Response.new(matches)
+    def get_player_history(player_id, game_id, options = {})
+      get("players/#{player_id}/history?game=#{game_id}", options)
     end
 
     def get_player_stats(player_id, game_id)
