@@ -2,6 +2,8 @@
 Hello!
 This is a implementation for most of the endpoints the Faceit Data v4 api offers, feel free to contribute or fork to fit your application.
 
+Some of the examples are missing some data, so please check out faceits official api site to get complete results from these requests
+
 ## Installation
 
 <p>Put this in your gemfile:</p>
