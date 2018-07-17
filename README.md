@@ -18,9 +18,9 @@ This is a implementation for most of the endpoints the Faceit Data v4 api offers
 
 <p>Then you can start working towards the api</p>
 
-<h3>Searches endpoints</h3>
+<h2>Searches endpoints</h2>
 
-<b><h4>GET /search/organizers Search for organizers</h4></b>
+<b><h2>GET /search/organizers Search for organizers</h2></b>
 
 <p><code>client.search_organizers({name: "Swedish Pro League", offset: "0", limit: "2"})</code></p>
 <i>Offset and limit is optional.</i>
@@ -38,7 +38,7 @@ This is a implementation for most of the endpoints the Faceit Data v4 api offers
 <code>"https://d50m6q67g4bn3.cloudfront.net/organizer_avatar/4bba8091-77f3-40a5-a986-715d160e2b53_1528027743156"</code>
   
 
-<b><h4>GET /search/players Search for players</h4></b>
+<b><h2>GET /search/players Search for players</h2></b>
 
 <p><code>client.search_players({nickname: "FrekvenZ", offset: "0", limit: "2"})</code></p>
 <i>Offset and limit is optional.</i>
@@ -55,7 +55,7 @@ This is a implementation for most of the endpoints the Faceit Data v4 api offers
 <p> Result: </p>
 <p><code>[{"name"=>"csgo", "skill_level"=>"6"}, {"name"=>"lol_EUW", "skill_level"=>"5"}]</code></p>
 
-<b><h4>GET /search/teams Search for teams</h4></b>
+<b><h2>GET /search/teams Search for teams</h2></b>
 <p><code>client.search_teams({nickname: "Astralis (Astralis)", offset: "0", limit: "2"})</code></p>
 <i>Offset and limit is optional.</i>
 
@@ -71,7 +71,7 @@ This is a implementation for most of the endpoints the Faceit Data v4 api offers
 <p> Result: </p>
 <p><code>"https://www.faceit.com/{lang}/teams/46367ae8-1345-4482-90e9-3f2e35e137fc"</code></p>
 
-<b><h4>GET /search/tournaments Search for tournaments</h4></b>
+<b><h2>GET /search/tournaments Search for tournaments</h2></b>
 <p><code>client.search_tournaments({name: "Weekly", offset: "0", limit: "2"})</code></p>
 <i>Offset and limit is optional.</i>
 
