@@ -69,9 +69,7 @@ module Faceit
 
     #MATCHES
     def get_match(match_id)
-      res = get("matches/#{match_id}", {})
-      matches = res['items'].map { |g| Match.new(g) }
-      Response.new(matches)
+      get("matches/#{match_id}", {})
     end
 
     def get_match_stats(match_id)
