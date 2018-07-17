@@ -50,7 +50,7 @@ module Faceit
 
     def get_player_history(player_id, game_id, options = {})
       res = get("players/#{player_id}/history?game=#{game_id}", options)
-      matches = res['items'].map { |g| PlayerMatch.new(g) }
+      matches = res['items']
       Response.new(matches)
     end
 
