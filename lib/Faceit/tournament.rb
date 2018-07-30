@@ -17,7 +17,7 @@ module Faceit
     attr_reader :slots
 
     def initialize(attributes = {})
-      @id = attributes['competition_id']
+      @competition_id = attributes['competition_id']
       @competition_type = attributes['competition_type']
       @name = attributes['name']
       @game = attributes['game']

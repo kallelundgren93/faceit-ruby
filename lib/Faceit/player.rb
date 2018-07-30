@@ -10,7 +10,7 @@ module Faceit
     attr_reader :verified
 
     def initialize(attributes = {})
-      @id = attributes['player_id']
+      @player_id = attributes['player_id']
       @nickname = attributes['nickname']
       @avatar = attributes['avatar']
       @country = attributes['country']
