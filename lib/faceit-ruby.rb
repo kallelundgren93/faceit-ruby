@@ -1,4 +1,4 @@
-require "../lib/faceit/client"
+require "../../lib/faceit/client"
 
 module Faceit
 end
