@@ -1,4 +1,5 @@
-
+require "faraday"
+require "faraday_middleware"
 
 require "faceit-ruby/response"
 require "faceit-ruby/api_error"
