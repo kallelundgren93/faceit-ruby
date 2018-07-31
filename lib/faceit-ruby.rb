@@ -1,4 +1,5 @@
-require_relative "faceit/client"
+require "faceit/version"
+require "faceit/client"
 
 module Faceit
 end
