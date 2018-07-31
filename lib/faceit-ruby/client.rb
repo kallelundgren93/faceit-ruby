@@ -1,13 +1,13 @@
 require "faraday"
 require "faraday_middleware"
 
-require "faceit/response"
-require "faceit/api_error"
-require "faceit/player"
-require "faceit/game"
-require "faceit/organizer"
-require "faceit/team"
-require "faceit/tournament"
+require "faceit-ruby/response"
+require "faceit-ruby/api_error"
+require "faceit-ruby/player"
+require "faceit-ruby/game"
+require "faceit-ruby/organizer"
+require "faceit-ruby/team"
+require "faceit-ruby/tournament"
 
 
 module Faceit

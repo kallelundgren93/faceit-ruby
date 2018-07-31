@@ -1,9 +1,9 @@
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+$:.push File.expand_path("../lib", __FILE__)
+require "faceit-ruby/client"
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
-  spec.version       = "2.1.1"
+  spec.version       = "2.1.2"
   spec.authors       = ["Kalle Lundgren"]
   spec.email         = ["kalle@saits.se"]
 
