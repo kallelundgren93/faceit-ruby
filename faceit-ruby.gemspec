@@ -1,9 +1,8 @@
 $:.push File.expand_path("../lib", __FILE__)
-require "faceit/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
-  spec.version       = Faceit::VERSION
+  spec.version       = "2.0.0"
   spec.authors       = ["Kalle Lundgren"]
   spec.email         = ["kalle@saits.se"]
 
