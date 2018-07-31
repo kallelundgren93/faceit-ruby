@@ -23,7 +23,7 @@ module Faceit
       end
 
       headers = {
-        "User-Agent": "face-it-ruby client #{Faceit::VERSION}"
+        "User-Agent": "face-it-ruby client"
       }
       unless api_key.nil?
         api_key = api_key.gsub(/^Bearer /, "")
