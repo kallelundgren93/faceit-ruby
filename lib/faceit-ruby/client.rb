@@ -18,8 +18,6 @@ module Faceit
     def initialize(api_key: nil)
       if api_key.nil?
         raise "An APIKEY is required to create client"
-      elsif !!api_key
-        warn(%{WARNING: Apikey is required.})
       end
 
       headers = {
