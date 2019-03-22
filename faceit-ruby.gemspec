@@ -1,11 +1,11 @@
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "faceit-ruby/client"
 
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
-  spec.version       = "3.0.1.1"
+
+  spec.version       = "3.1.1"
   spec.authors       = ["Kalle Lundgren"]
   spec.email         = ["kalle@saits.se"]
 
@@ -21,8 +21,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "faraday", "0.12.2"
-  spec.add_dependency "faraday_middleware", "~> 0.12"
+  spec.add_runtime_dependency "faraday", "0.12.0.1"
+  spec.add_runtime_dependency "faraday_middleware", "~> 0.12"
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
