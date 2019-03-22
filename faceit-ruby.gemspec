@@ -5,7 +5,7 @@ require "faceit-ruby/client"
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
-  spec.version       = "3.0.1"
+  spec.version       = "3.0.1.1"
   spec.authors       = ["Kalle Lundgren"]
   spec.email         = ["kalle@saits.se"]
 
