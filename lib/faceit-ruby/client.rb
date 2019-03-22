@@ -50,12 +50,6 @@ module Faceit
 
     def get_player_stats(player_id, game_id)
       res = get("players/#{player_id}/stats/#{game_id}", {})
-
-      if res
-        res
-      else
-        nil
-      end
     end
 
     #Games
