@@ -4,6 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "faceit-ruby"
+
   spec.version       = "3.1.1"
   spec.authors       = ["Kalle Lundgren"]
   spec.email         = ["kalle@saits.se"]
