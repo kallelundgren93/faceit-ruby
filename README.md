@@ -1,4 +1,6 @@
 # Welcome to faceit-ruby
+(A new gem is currently in the making, so until then this will be unattended)
+
 Hello!
 This is a implementation for most of the endpoints the Faceit Data v4 api offers, feel free to contribute or fork to fit your application.
 
